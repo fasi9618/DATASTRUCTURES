@@ -8,23 +8,11 @@ class LinkedList:
     def __init__(self):
         self.head = None  
         
-    def del_end(self):
-        if self.head is None:
-            return
-
-        # If only one node, remove head
-        if self.head.next is None:
-            self.head = None
-            return
-
-        # Find second-to-last node
+    def del_end(self):       
         itr = self.head
         while itr.next and itr.next.next:
-            itr = itr.next
-
-        # Unlink last node
+            itr = itr.next       
         itr.next = None
-
     def add_end(self, data):
         new = Node(data)
 
@@ -65,3 +53,9 @@ ll.add_end(30)
 ll.add_beg(40)
 ll.del_end()
 ll.display()
+'''
+remove 2 nodes,finding a loop,slow and 
+fast pointer ,reverse a single ll,
+find out duplicates in LL
+remove element from start/end of ll
+'''
